@@ -35,10 +35,11 @@ app.get('/', (req, res) => {
 })
 
 app.post("/myServer", (req, res) => {
-    const { data, key } = JSON.parse(res.body); 
-    const encrypted = CryptoJS.AES.encrypt(data, key);
-    // save encrypted file to a folder;
-    res.end('File Upload Successfull');
+  const { data, key } = req.body;
+  // console.log(req, req.body)
+  // const encrypted = CryptoJS.AES.encrypt(data, key);
+  // save encrypted file to a folder;
+  res.end('File Upload Successfull');
 });
 
 /**

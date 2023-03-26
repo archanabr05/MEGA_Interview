@@ -15,7 +15,8 @@ const saveFile = async (file) => {
         method: 'POST',
         body: JSON.stringify({ data: formData, key: userEnteredEncrytionKey }),
          headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
         }
     })
         .then((res) => {
