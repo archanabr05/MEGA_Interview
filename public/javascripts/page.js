@@ -14,8 +14,9 @@ const getKey = async () => {
       'Content-Type': 'application/json',
     },
   })
-    .then(res => {
-      encryptionKey = '12345'; // res;
+    .then(async res => {
+      const { data } = await res.json();
+      encryptionKey = data;
     })
     .catch(err => ('Error', err));
 };
