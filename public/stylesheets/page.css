@@ -1,0 +1,171 @@
+@font-face {
+  font-family: SansRegular;
+  src:url(../fonts/SourceSansPro/SourceSansPro-Regular.otf)
+}
+
+@font-face {
+  font-family: SansSemiBold;
+  src: url(../fonts/SourceSansPro/SourceSansPro-Semibold.otf);
+}
+
+@font-face {
+  font-family: SansBold;
+  src: url(../fonts/SourceSansPro/SourceSansPro-Bold.otf);
+}
+
+body {
+    font-family: SansRegular;
+}
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: -1;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.container {
+    width: 70rem;
+    height: initial;
+    border-radius: 0.8rem;
+    max-width: 88rem;
+    max-height: 70rem;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    margin: 2rem;
+    box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
+    background-color: #fff;
+}
+
+.uploadSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: 1rem;
+    gap: 1rem;
+}
+
+input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    border-color: initial;
+}
+
+.actionsContainer {
+    display: flex;
+    gap: .5rem;
+}
+
+.actionsContainer .button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .4rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 250ms;
+  width: auto;
+  padding: 1rem;
+  font-family: SansSemiBold;
+}
+
+.actionsContainer .button:hover,
+.actionsContainer .button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#browse {
+    width: 30%;
+}
+
+#uploadButton {
+    width: 100%;
+    background-color: rgb(196, 197, 196);
+}
+
+#uploadButton:disabled {
+    background-color: #FFFFFF;
+    cursor: not-allowed;
+}
+
+#encryptionInput {
+    font-size: 1.8rem;
+}
+
+.progressSection {
+    background-color: #505050;
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+}
+
+.gdMessage {
+ text-align: center;
+ width: 100%;
+}
+
+.filesTable table {
+    color: #fff;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 .5rem;
+}
+
+th {
+    font-family: SansSemiBold;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+th, td {
+    text-align: left;
+    padding: .3rem;
+}
+
+tbody tr {
+    font-size: .8rem;
+    background-color: #424242;
+}
+
+tr img {
+    width: 1.5rem;
+}
+
+#fileSizeError, #encryptionError {
+    color: red;
+    margin: 0;
+    font-size: .8rem;
+}
